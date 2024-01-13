@@ -253,7 +253,7 @@ shape = SubResource("CapsuleShape2D_34u5m")
 position = Vector2(87, 47)
 scale = Vector2(1.592, 1.5)
 sprite_frames = SubResource("SpriteFrames_0m07g")
-animation = &"idle"
+animation = &"crouch"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
