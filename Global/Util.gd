@@ -15,3 +15,10 @@ func _saveGame():
 	
 func _loadGame():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if FileAccess.file_exists(SAVE_PATH): # if file exists - return true. can add == true
+		if not file.eof_reached():
+			var current_line = JSON.parse_string(file.get_line())
+			if current_line:
+				Game.playerHP = current_line["PlayerHP"]
+				Game.gold = current_line["Gold"]
+		
